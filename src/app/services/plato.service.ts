@@ -7,7 +7,7 @@ import { Plato } from '../models/plato';
 })
 export class PlatoService {
 
-  platoUrl: string = "https://localhost:7074/api/v1/Plato/GetPlatos";
+  platoUrl: string = "https://localhost:7074/api/v1/Plato";
   platopagUrl: String = "https://localhost:7074/api/v1/Plato/GetPlatos/page/0/size/5";
   platoCreateUrl:String ="https://localhost:7074/api/v1/Plato/CrearPlato";
   platoUpdateUrl:String="https://localhost:7074/api/v1/Plato/ActualizarPlato";
@@ -22,7 +22,7 @@ export class PlatoService {
    }
 
    getPlatos(): Observable<Plato[]>{
-    return this.httpClient.get<Plato[]>(this.platoUrl);
+    return this.httpClient.get<Plato[]>(`${this.platoUrl}/GetPlatos`);
   }
 
   getPlatosPaginacion(page : number, size : number): Observable<any> {
@@ -44,7 +44,7 @@ export class PlatoService {
   }
 
   // Obtener platos por categoría
-  getPlatosByCategory(categoryId: number): Observable<any> {
-    return this.httpClient.get<any>(`${this.platoUrl}/GetPlatosPorCategoria/${categoryId}`);
+  getPlatosByCategory(categoryId: any): Observable<any> {
+    return this.httpClient.get<any>(`${this.platoUrl}/GetPlatosByCategoria/${categoryId}`);
   }
 }

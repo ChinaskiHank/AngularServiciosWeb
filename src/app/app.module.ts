@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
-import { MatPaginatorModule } from '@angular/material/paginator';
+//import {MatPaginatorModule} from '@angular/material/paginator';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { EliminarPlatoComponent } from './components/insertar-producto/eliminar-
 import { ListadoClientesComponent } from './components/listado-clientes/listado-clientes.component';
 import { ReporteVentaComponent } from './components/reporte-venta/reporte-venta.component';
 import { ListarComentariosComponent } from './components/listar-comentarios/listar-comentarios.component';
+import { CategoryService } from './services/category.service';
 
 @NgModule({
   declarations: [
@@ -40,15 +41,15 @@ import { ListarComentariosComponent } from './components/listar-comentarios/list
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
-    MatPaginatorModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    //MatPaginatorModule,
     RouterModule.forRoot([
-      {path:'',component:ProductListComponent}
+      { path: '', component: ProductListComponent }
     ]),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

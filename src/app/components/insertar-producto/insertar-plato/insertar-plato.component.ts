@@ -15,9 +15,7 @@ export class InsertarPlatoComponent implements OnInit {
   constructor(
     private platoService: PlatoService,
     private formBuilder: FormBuilder
-  ) { }
-
-  ngOnInit() {
+  ) {
     this.platoForm = this.formBuilder.group({
       nomPlato: ['', Validators.required],
       descripcion: ['', Validators.required],
@@ -26,6 +24,9 @@ export class InsertarPlatoComponent implements OnInit {
       categoria: ['', Validators.required],
       imagen: ['', Validators.required]
     });
+   }
+
+  ngOnInit() {
   }
 
   createPlato() {

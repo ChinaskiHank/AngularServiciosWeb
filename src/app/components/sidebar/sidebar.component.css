@@ -24,3 +24,12 @@
     padding-bottom: 10px; /* Puedes ajustar el valor según tus necesidades */
     margin-bottom: 23px; /* Puedes ajustar el valor según tus necesidades */
   }
+
+  .link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }

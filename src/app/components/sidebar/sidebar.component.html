@@ -2,6 +2,7 @@
   <a *ngFor="let c of categories" class="list-group-item"
     >
     <a><img [src]="c.imgCat" alt="{{ c.nomCategoria }}" class="imagen-pequena"></a>
-    <a><span class="titulo-grande">{{ c.nomCategoria }}</span></a>
+    <a (click)="filtrarPorCategoria(c)" class="link"><span class="titulo-grande">{{ c.nomCategoria }}</span></a>
   </a>
+  <a (click)="filtrarPorCategoria(null)" class="link">Limpiar</a>
 </div>

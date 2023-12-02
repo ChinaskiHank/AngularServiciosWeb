@@ -1,0 +1,7 @@
+<div class="list-group">
+  <a *ngFor="let c of categories" class="list-group-item"
+    >
+    <a><img [src]="c.imgCat" alt="{{ c.nomCategoria }}" class="imagen-pequena"></a>
+    <a><span class="titulo-grande">{{ c.nomCategoria }}</span></a>
+  </a>
+</div>

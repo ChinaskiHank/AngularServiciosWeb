@@ -1,0 +1,36 @@
+<!-- product-list/product-list.component.html -->
+
+<p class="titulo">Listado de Platos</p>
+<a routerLink="/insertar-plato" class="boton-insertar">Insertar Producto</a>
+
+    <table class="table table-striped">
+      <!-- Cabecera de la tabla -->
+      <thead>
+        <tr>
+          <th>Nombre De Plato</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Nombre de la Categoria</th>
+          <th>Categoria</th>
+          <th>Imagen</th>
+          <th>ref</th>
+          <!-- Otros campos... -->
+        </tr>
+      </thead>
+      <!-- Cuerpo de la tabla -->
+      <tbody>
+        <!-- Iterar sobre los platos y mostrar cada uno -->
+        <tr *ngFor="let plato of platos">
+          <td>{{ plato.nomPlato }}</td>
+          <td>{{ plato.descripcion }}</td>
+          <td>{{ plato.precio}}</td>
+          <td>{{ plato.categoriaNombre}}</td>
+          <td>{{ plato.categoria}}</td>
+          <td><img [src]="plato.imagen" class="imagen-pequena"></td>
+          <td><a routerLink="/editar-plato" class="boton-edit">Actualizar</a>
+            <a routerLink="/eliminar-plato" class="boton-eliminar">Eliminar</a>
+          </td>
+          <!-- Otros campos... -->
+        </tr>
+      </tbody>
+    </table>

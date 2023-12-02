@@ -1,0 +1,13 @@
+.boton-ingresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:  #FBB03C;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boton-ingresar:hover {
+    background-color: #B95700;
+  }

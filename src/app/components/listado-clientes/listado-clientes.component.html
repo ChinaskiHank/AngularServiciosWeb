@@ -1,0 +1,29 @@
+
+<p class="titulo">Listado de Clientes</p>
+
+    <table class="table table-striped">
+      <!-- Cabecera de la tabla -->
+      <thead>
+        <tr>
+          <th>Nombre </th>
+          <th>Apellido </th>
+          <th>Telefono</th>
+          <th>Email</th>
+          <th>Direccion</th>
+
+          <!-- Otros campos... -->
+        </tr>
+      </thead>
+      <!-- Cuerpo de la tabla -->
+      <tbody>
+        <!-- Iterar sobre los platos y mostrar cada uno -->
+        <tr *ngFor="let cliente of clientes">
+          <td>{{ cliente.nomCliente }}</td>
+          <td>{{ cliente.apellCliente }}</td>
+          <td>{{ cliente.telefono}}</td>
+          <td>{{ cliente.email}}</td>
+          <td>{{ cliente.direccion}}</td>
+          <!-- Otros campos... -->
+        </tr>
+      </tbody>
+    </table>

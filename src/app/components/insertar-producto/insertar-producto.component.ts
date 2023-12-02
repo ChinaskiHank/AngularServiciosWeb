@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { PlatoService } from 'src/app/services/plato.service';
-import { Category } from 'src/app/models/category';
+
 import { Plato } from 'src/app/models/plato';
 
 @Component({

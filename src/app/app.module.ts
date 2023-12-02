@@ -17,6 +17,7 @@ import { InsertarProductoComponent } from './components/insertar-producto/insert
 import { InsertarPlatoComponent } from './components/insertar-producto/insertar-plato/insertar-plato.component';
 import { EditarPlatoComponent } from './components/insertar-producto/editar-plato/editar-plato.component';
 import { EliminarPlatoComponent } from './components/insertar-producto/eliminar-plato/eliminar-plato.component';
+import { ListadoClientesComponent } from './components/listado-clientes/listado-clientes.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { EliminarPlatoComponent } from './components/insertar-producto/eliminar-
     InsertarPlatoComponent,
     EditarPlatoComponent,
     EliminarPlatoComponent,
+    ListadoClientesComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { InsertarProductoComponent } from './components/insertar-producto/insert
 import { InsertarPlatoComponent } from './components/insertar-producto/insertar-plato/insertar-plato.component';
 import { EditarPlatoComponent } from './components/insertar-producto/editar-plato/editar-plato.component';
 import { EliminarPlatoComponent } from './components/insertar-producto/eliminar-plato/eliminar-plato.component';
+import { ListadoClientesComponent } from './components/listado-clientes/listado-clientes.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 const routes: Routes =[
   
@@ -15,7 +17,10 @@ const routes: Routes =[
   { path: 'insertar-producto', component: InsertarProductoComponent },
   { path: 'insertar-plato', component: InsertarPlatoComponent },
   { path: 'editar-plato', component: EditarPlatoComponent },
-  { path: 'eliminar-plato', component: EliminarPlatoComponent }
+  { path: 'eliminar-plato', component: EliminarPlatoComponent },
+  { path: 'listado-clientes', component: ListadoClientesComponent },
+  { path: 'sidebar', component: SidebarComponent }
+
   
   
 ]

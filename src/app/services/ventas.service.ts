@@ -9,10 +9,16 @@ import { Ventas } from '../models/ventas';
 
   export class OrderService {
 
+    url_base:string = "https://localhost:7089/api/v1/Ventas/ListaVentas";
+    urlcreateOrder:string ="https://localhost:7089/api/v1/Ventas/GetVenta"
+
     constructor(private httpClient:HttpClient) { }
-     url_base:string = "https://localhost:7200";
+     
   
-    createOrder():Observable<Ventas[]>{
-        return this.httpClient.get<Ventas[]>(`${this.url_base}/api/v1/GetVentas`)
+    createOrder(venta : any):Observable<any>{
+        return this.httpClient.post<any>(this.urlcreateOrder,venta);
+    }
+    getVentas():Observable<Ventas[]>{
+      return this.httpClient.get<Ventas[]>(this.url_base);
     }
   }

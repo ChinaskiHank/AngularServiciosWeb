@@ -1,10 +1,13 @@
 export class Ventas {
-    VentaId?:Number
-    ClienteId?:Number
-    NombreCliente?:String
-    ApellidoCliente?:String
-    Email?:String
-    Telefono?:String
-    FechaVenta?:Date
-    Monto?:String
+    ventaId?:Number
+    clienteId?:Number
+    nombreCliente?:String
+    apellidoCliente?:String
+    email?:String
+    telefono?:String
+    fechaVenta?:Date
+    monto?:String
+    detalleVentas?:null
+    detalleVentaId?:String
+    idPlato?:Number
 }

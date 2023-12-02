@@ -1,0 +1,37 @@
+
+<p class="titulo">Reporte de Ventas</p>
+
+    <table class="table table-striped">
+      <!-- Cabecera de la tabla -->
+      <thead>
+        <tr>
+          <th>Cliente ID</th>
+          <th>Nombre Cliente </th>
+          <th>Apellido Cliente</th>
+          <th>Email</th>
+          <th>Telefono</th>
+          <th>FechaVenta</th>
+          <th>Monto</th>
+
+
+
+          <!-- Otros campos... -->
+        </tr>
+      </thead>
+      <!-- Cuerpo de la tabla -->
+      <tbody>
+        <!-- Iterar sobre los platos y mostrar cada uno -->
+        <tr *ngFor="let ven of ventas ">
+          <td>{{ ven.clienteId }}</td>
+          <td>{{ ven.nombreCliente }}</td>
+          <td>{{ ven.apellidoCliente}}</td>
+          <td>{{ ven.email}}</td>
+          <td>{{ ven.telefono}}</td>
+          <td>{{ ven.fechaVenta}}</td>
+          <td>{{ ven.monto}}</td>
+
+
+          <!-- Otros campos... -->
+        </tr>
+      </tbody>
+    </table>

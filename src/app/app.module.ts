@@ -18,6 +18,8 @@ import { InsertarPlatoComponent } from './components/insertar-producto/insertar-
 import { EditarPlatoComponent } from './components/insertar-producto/editar-plato/editar-plato.component';
 import { EliminarPlatoComponent } from './components/insertar-producto/eliminar-plato/eliminar-plato.component';
 import { ListadoClientesComponent } from './components/listado-clientes/listado-clientes.component';
+import { ReporteVentaComponent } from './components/reporte-venta/reporte-venta.component';
+import { ListarComentariosComponent } from './components/listar-comentarios/listar-comentarios.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ListadoClientesComponent } from './components/listado-clientes/listado-
     EditarPlatoComponent,
     EliminarPlatoComponent,
     ListadoClientesComponent,
+    ReporteVentaComponent,
+    ListarComentariosComponent,
   ],
   imports: [
     BrowserModule,

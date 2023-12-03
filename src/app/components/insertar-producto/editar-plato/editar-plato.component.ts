@@ -22,6 +22,12 @@ export class EditarPlatoComponent implements OnInit {
 
   ngOnInit(){
     
+    this.route.params.subscribe(params => {
+      this.platoId = params['id'];
+      console.log('Valor del ID:', this.platoId);
+      // Ahora puedes usar el valor del ID como desees en este componente
+    });
+
     // Inicializar el formulario
     this.platoForm = this.formBuilder.group({
       platoId: ['', Validators.required],
@@ -51,7 +57,7 @@ export class EditarPlatoComponent implements OnInit {
       this.platos.push(newPlato);
       this.platoForm.reset();
       // Redirigir a la lista de platos después de la actualización
-      this.router.navigate(['/lista-de-platos']);
+      this.router.navigate(['/insertar-producto']);
     });
   }
 

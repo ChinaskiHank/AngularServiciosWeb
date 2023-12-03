@@ -13,7 +13,7 @@
           <th>Nombre de la Categoria</th>
           <th>Categoria</th>
           <th>Imagen</th>
-          <th>ref</th>
+          <th>Acciones</th>
           <!-- Otros campos... -->
         </tr>
       </thead>
@@ -27,10 +27,28 @@
           <td>{{ plato.categoriaNombre}}</td>
           <td>{{ plato.categoria}}</td>
           <td><img [src]="plato.imagen" class="imagen-pequena"></td>
-          <td><a routerLink="/editar-plato" class="boton-edit">Actualizar</a>
-            <a routerLink="/eliminar-plato" class="boton-eliminar">Eliminar</a>
+          <td>
+            <i [routerLink]="['/editar-plato', { id: plato.platoId}]" class="bi bi-pencil-fill"></i> <span>  </span>
+            <i class="bi bi-trash-fill" (click)="abrirModalEliminar(plato.platoId, modalEliminar)"></i>
           </td>
           <!-- Otros campos... -->
         </tr>
       </tbody>
     </table>
+
+    <!-- Template del modal -->
+<ng-template #modalEliminar let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Confirmar Eliminación</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    ¿Estás seguro de que deseas eliminar este elemento?
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cancel click')">Cancelar</button>
+    <button type="button" class="btn btn-danger" (click)="confirmarEliminar()">Eliminar</button>
+  </div>
+</ng-template>

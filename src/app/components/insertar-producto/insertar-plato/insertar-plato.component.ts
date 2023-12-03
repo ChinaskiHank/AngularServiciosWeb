@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Plato } from 'src/app/models/plato';
 import { PlatoService } from 'src/app/services/plato.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-insertar-plato',
@@ -14,6 +15,7 @@ export class InsertarPlatoComponent implements OnInit {
 
   constructor(
     private platoService: PlatoService,
+    private router: Router,
     private formBuilder: FormBuilder
   ) {
     this.platoForm = this.formBuilder.group({
@@ -35,10 +37,10 @@ export class InsertarPlatoComponent implements OnInit {
       return;
     }
 
-    const platoData = this.platoForm.value;
-    this.platoService.createPlato(platoData).subscribe((newPlato) => {
+    this.platoService.createPlato(this.platoForm.value).subscribe((newPlato) => {
       this.inplato.push(newPlato);
       this.platoForm.reset();
+      this.router.navigate(['/insertar-producto']);
     });
   }
 }

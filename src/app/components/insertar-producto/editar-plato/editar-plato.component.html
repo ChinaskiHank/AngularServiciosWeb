@@ -8,7 +8,7 @@
             <div class="sm:col-span-3">
                 <label for="platoId" class="block text-sm font-medium leading-6 text-gray-900 uppercase">ID del plato</label>
                 <div class="mt-2">
-                  <input type="text" id="platoId" formControlName="platoId" class="block w-full p-3 rounded-md border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" readonly/>
+                  <input type="text" id="platoId" [disabled]="true" formControlName="platoId" class="block w-full p-3 rounded-md border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" readonly/>
                 </div>
               </div>
             <div class="sm:col-span-3">
@@ -64,13 +64,18 @@
           </div>
         </div>
       </div>
-  
+  <br>
       <!-- Funciones -->
       <button
       type="submit"
+      style="background: blue;"
       class="rounded-md bg-indigo-600 p-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 uppercase focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
     >
       Editar Plato
     </button>
     </form>
+    <br>
+    <button class="rounded-md bg-indigo-600 p-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 uppercase focus-visible:outline-offset-2 focus-visible:outline-indigo-600" 
+    style="background: red;"
+    routerLink="/insertar-producto">Cancelar</button>
   </div>

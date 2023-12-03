@@ -11,7 +11,7 @@ export class PlatoService {
   platopagUrl: String = "https://localhost:7074/api/v1/Plato/GetPlatos/page/0/size/5";
   platoCreateUrl:String ="https://localhost:7074/api/v1/Plato/CrearPlato";
   platoUpdateUrl:String="https://localhost:7074/api/v1/Plato/ActualizarPlato";
-  PlatoById:String="https://localhost:7074/api/v1/Plato/GetPlatosById/{id}";
+  PlatoById:String="https://localhost:7074/api/v1/Plato/GetPlatosById";
   
 
   selectedPlatoSubject = new BehaviorSubject<Plato | null>(null);
@@ -29,7 +29,7 @@ export class PlatoService {
     return this.httpClient.get<any>(`${this.platopagUrl}`)
   }
   getPlatosById(id: number): Observable<Plato> {
-    const url = `${this.PlatoById}/${id}`; // Asegúrate de tener la URL correcta
+    const url = `${this.PlatoById}?id=${id}`; // Asegúrate de tener la URL correcta
     return this.httpClient.get<Plato>(url);
   }
   createPlato(plato : any): Observable<any> {
@@ -39,8 +39,8 @@ export class PlatoService {
   updatePlato(plato : any): Observable<any> {
     return this.httpClient.put<any>(`${this.platoUpdateUrl}`, plato)
   }
-  deleteProduct(id: any) {
-    return this.httpClient.delete<any>(`${this.platoUrl}/api/v1/Plato/EliminarPlato/${id}`)
+  deleteProduct(id: any): Observable<any> {
+    return this.httpClient.delete<any>(`${this.platoUrl}/EliminarPlato?platoId=${id}`)
   }
 
   // Obtener platos por categoría

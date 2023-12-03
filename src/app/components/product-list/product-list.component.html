@@ -1,1 +1,23 @@
 <a routerLink="/insertar-producto" class="boton-ingresar">Listado de Platos</a>
+<table class="table">
+    <ng-container *ngFor="let plato of platos; let i = index">
+      <tr *ngIf="i % 3 === 0">
+        <!-- Inicia una nueva fila cada 3 platos -->
+      </tr>
+      <td>
+        <div class="plato-container">
+          <form action="agregar">
+            <img [src]="plato.imagen" class="imagen-pequena"/><br />
+            <p> {{ plato.nomPlato }}</p>
+            <p>Precio: {{ plato.precio }}</p>
+            <p>Categoria: {{plato.categoriaNombre}}</p>
+            <input type="hidden" name="producto" [value]="plato.platoId" />
+            <input type="submit" value="Agregar"  class="boton-agregar"/>
+          </form>
+        </div>
+      </td>
+      <ng-container *ngIf="(i + 1) % 3 === 0 || i === platos.length - 1">
+        <!-- Cierra la fila después de cada tercer plato o al final de la iteración -->
+      </ng-container>
+    </ng-container>
+  </table>

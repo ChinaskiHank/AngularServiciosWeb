@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Comentario } from 'src/app/models/comentario';
+import { ComentarioService } from 'src/app/services/comentario.service';
 
 @Component({
   selector: 'app-listar-comentarios',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./listar-comentarios.component.css']
 })
 export class ListarComentariosComponent {
+comentarios :Comentario[] =[]
 
+constructor(private comentarioService: ComentarioService) {
+
+  this.comentarioService.getComentario().subscribe(res =>{this.comentarios=res})
+}
 }

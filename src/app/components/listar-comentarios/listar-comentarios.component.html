@@ -1,1 +1,20 @@
-<p>listar-comentarios works!</p>
+<p class="titulo">Comentarios de los platos</p>
+
+    <table class="table table-striped">
+      <!-- Cabecera de la tabla -->
+      <thead>
+        <tr>
+          <th>Opiniones de los platos de los clientes </th>
+          <!-- Otros campos... -->
+        </tr>
+      </thead>
+      <!-- Cuerpo de la tabla -->
+      <tbody>
+        <!-- Iterar sobre los platos y mostrar cada uno -->
+        <tr *ngFor="let com of comentarios">
+         <td>Cliente: {{ com.comentarioName }}</td>
+
+          <!-- Otros campos... -->
+        </tr>
+      </tbody>
+    </table>

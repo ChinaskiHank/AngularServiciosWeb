@@ -1,0 +1,23 @@
+.imagen-pequena {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Agrega un margen a la derecha para separar la imagen del texto */
+  }
+  p{
+    font-size: 2.0em;
+    color: darkorange;
+    font-style: bold;
+  }
+  .boton-ingresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:  #FBB03C;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boton-ingresar:hover {
+    background-color: #B95700;
+  }

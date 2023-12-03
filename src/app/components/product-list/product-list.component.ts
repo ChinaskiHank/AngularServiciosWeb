@@ -18,6 +18,20 @@ export class ProductListComponent {
     private categoryService: CategoryService,
     private platoService: PlatoService
   ) { }
-
+  ngOnInit(): void {
+    this.categoryService.selectedCategory$.subscribe((selectedCategory) => {
+      if (selectedCategory) {
+        console.log("selectedCategory" + selectedCategory);
+        this.platoService.getPlatosByCategory(selectedCategory.categoriaId).subscribe((res) => {
+          this.platos = res;
+        });
+      } else {
+        console.log("general");
+        this.platoService.getPlatos().subscribe((res) => {
+          this.platos = res;
+        });
+      }
+    });
+  }
 
 }

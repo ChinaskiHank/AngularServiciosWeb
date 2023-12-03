@@ -6,8 +6,36 @@
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 30px;
   }
   
   .boton-ingresar:hover {
+    background-color: #B95700;
+  }
+  .imagen-pequena {
+    width: 160px;
+    height: 160px;
+    margin-left: 40px; /* Agrega un margen a la derecha para separar la imagen del texto */
+    text-align: center;
+  }
+  .plato-container {
+    margin-bottom: 35px; /* Ajusta el valor según la separación que desees */
+    margin-left: 90px;
+  }
+  p{
+    text-align: center;
+  }
+  .boton-agregar{
+    text-align: center;
+    margin-left: 77px;
+    background-color:  #FBB03C;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .boton-agregar:hover{
     background-color: #B95700;
   }

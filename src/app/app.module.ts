@@ -22,6 +22,7 @@ import { ReporteVentaComponent } from './components/reporte-venta/reporte-venta.
 import { ListarComentariosComponent } from './components/listar-comentarios/listar-comentarios.component';
 import { CategoryService } from './services/category.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
